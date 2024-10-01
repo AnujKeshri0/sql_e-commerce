@@ -1,6 +1,35 @@
+**Project Overview**
+Title: E-commerce Sales and Customer Insights Analysis
 
+Description: This project analyzes e-commerce data to extract insights about sales performance, customer behavior, and product popularity. The goal is to use data-driven findings to support business decision-making, improve marketing strategies, and enhance customer satisfaction.
 
--- This query calculates the total sales amount for each product.
+Project Objectives
+Analyze Sales Performance: Understand total sales figures and trends over time to gauge business health.
+Segment Customers: Identify different customer groups based on spending habits to tailor marketing efforts.
+Evaluate Product Performance: Determine which products sell best and which have high return rates.
+Conduct Cohort Analysis: Assess customer retention and repeat purchase behavior to improve customer loyalty.
+    
+Project Structure
+Data Model:
+Users
+Orders_d
+OrderItems
+Products
+    
+Data Analysis:
+SQL queries for sales performance, customer segmentation, product analysis, and cohort analysis.
+Insights and Visualizations:
+
+Key findings on sales trends, customer segments, top-selling products, and retention rates.
+Charts and graphs to illustrate data visually.
+    
+Key Insights
+Sales Performance: Total sales and average order value help gauge business health.
+Customer Segmentation: Groups based on spending allow for targeted marketing.
+Product Performance: Identifies best-sellers and areas for improvement based on returns.
+Cohort Analysis: Measures customer loyalty and informs retention strategies.
+
+-- This query calculates the total sales amount for each product.   
 SELECT 
     p.product_name,
     SUM(oi.price * oi.quantity) AS total_sales
