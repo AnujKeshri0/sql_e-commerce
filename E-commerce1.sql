@@ -1,7 +1,7 @@
 **Project Overview**
 Title: E-commerce Sales and Customer Insights Analysis
 
-**Description: This project analyzes e-commerce data to extract insights about sales performance, customer behavior, and product popularity. The goal is to use data-driven findings to support business decision-making, improve marketing strategies, and enhance customer satisfaction.
+Description: This project analyzes e-commerce data to extract insights about sales performance, customer behavior, and product popularity. The goal is to use data-driven findings to support business decision-making, improve marketing strategies, and enhance customer satisfaction.
 
 Project Objectives
 Analyze Sales Performance: Understand total sales figures and trends over time to gauge business health.
@@ -29,7 +29,7 @@ Customer Segmentation: Groups based on spending allow for targeted marketing.
 Product Performance: Identifies best-sellers and areas for improvement based on returns.
 Cohort Analysis: Measures customer loyalty and informs retention strategies.
 
--- This query calculates the total sales amount for each product.   
+1>-- This query calculates the total sales amount for each product.   
 SELECT 
     p.product_name,
     SUM(oi.price * oi.quantity) AS total_sales
@@ -42,7 +42,7 @@ GROUP BY
 ORDER BY 
     total_sales DESC;
 
--- Total Orders by User
+2>-- Total Orders by User
 SELECT 
     u.username,
     COUNT(o.order_id) AS total_orders
@@ -55,7 +55,7 @@ GROUP BY
 ORDER BY 
     total_orders DESC;
 
--- Orders in the Last 30 Days:
+3>-- Orders in the Last 30 Days:
 SELECT 
     COUNT(order_id) AS total_orders,
     SUM(total_amount) AS total_sales
@@ -64,7 +64,7 @@ FROM
 WHERE 
     order_date >= NOW() - INTERVAL 30 DAY;
 
--- Sales Trend Over Time:
+4>-- Sales Trend Over Time:
 SELECT 
     DATE(order_date) AS order_day,
     SUM(total_amount) AS total_sales
@@ -75,7 +75,7 @@ GROUP BY
 ORDER BY 
     order_day;
     
-    -- Most Active Users:
+ 5>   -- Most Active Users:
 
 SELECT 
     u.username,
@@ -90,7 +90,7 @@ ORDER BY
     total_orders DESC
 LIMIT 5;
 
--- Running Total of Sales
+6>-- Running Total of Sales
 -- This query calculates a running total of sales for each day, showing how sales accumulate over time.
 
 SELECT 
@@ -104,7 +104,7 @@ GROUP BY
 ORDER BY 
     order_day;
 
--- Top Products by Sales with Ranks
+7>-- Top Products by Sales with Ranks
 SELECT 
     p.product_name,
     SUM(oi.price * oi.quantity) AS total_sales,
@@ -118,7 +118,7 @@ GROUP BY
 ORDER BY 
     sales_rank;
 
--- Customer Purchase Patterns
+8>-- Customer Purchase Patterns
 -- This query identifies users who have made multiple purchases and calculates their total spending.
 
 SELECT 
@@ -136,7 +136,7 @@ HAVING
 ORDER BY 
     total_spending DESC;
 
- -- Monthly Sales Growth
+9> -- Monthly Sales Growth
 -- This query calculates the percentage growth in sales from one month to the next.
 
 WITH MonthlySales AS (
@@ -157,7 +157,7 @@ SELECT
 FROM 
     MonthlySales;
 
--- Products with No Sales
+10>-- Products with No Sales
 -- This query finds products that have never been sold.
 
 SELECT 
@@ -182,7 +182,7 @@ GROUP BY
 ORDER BY 
     order_year;
 
--- Year-over-Year Sales Comparison
+11?-- Year-over-Year Sales Comparison
 -- This query compares sales for each year to the previous year, highlighting growth or decline.
 
 WITH YearlySales AS (
@@ -210,7 +210,7 @@ LEFT JOIN
 ORDER BY 
     current.order_year;
 
--- User Segmentation by Spending
+12>-- User Segmentation by Spending
 -- This query segments users based on their total spending into different tiers.
 SELECT 
     u.username,
@@ -230,7 +230,7 @@ GROUP BY
 ORDER BY 
     total_spending DESC;
 
- -- Monthly Unique Customer Analysis
+13> -- Monthly Unique Customer Analysis
 -- This query counts the number of unique customers who placed orders each month.
 
 SELECT 
