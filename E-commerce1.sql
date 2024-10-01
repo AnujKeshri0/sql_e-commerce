@@ -1,7 +1,7 @@
 **Project Overview**
 Title: E-commerce Sales and Customer Insights Analysis
 
-Description: This project analyzes e-commerce data to extract insights about sales performance, customer behavior, and product popularity. The goal is to use data-driven findings to support business decision-making, improve marketing strategies, and enhance customer satisfaction.
+**Description: This project analyzes e-commerce data to extract insights about sales performance, customer behavior, and product popularity. The goal is to use data-driven findings to support business decision-making, improve marketing strategies, and enhance customer satisfaction.
 
 Project Objectives
 Analyze Sales Performance: Understand total sales figures and trends over time to gauge business health.
