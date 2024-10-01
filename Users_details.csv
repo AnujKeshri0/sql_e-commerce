@@ -1,0 +1,28 @@
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL
+);
+
+NSERT INTO Users (user_id, username, email, password) VALUES
+(1, 'John Doe', 'john.doe@example.com', 'password1'),
+(2, 'Jane Smith', 'jane.smith@example.com', 'password2'),
+(3, 'Alice Johnson', 'alice.johnson@example.com', 'password3'),
+(4, 'Bob Brown', 'bob.brown@example.com', 'password4'),
+(5, 'Emily Davis', 'emily.davis@example.com', 'password5'),
+(6, 'Michael Wilson', 'michael.wilson@example.com', 'password6'),
+(7, 'Sarah Miller', 'sarah.miller@example.com', 'password7'),
+(8, 'David Garcia', 'david.garcia@example.com', 'password8'),
+(9, 'Laura Rodriguez', 'laura.rodriguez@example.com', 'password9'),
+(10, 'James Martinez', 'james.martinez@example.com', 'password10'),
+(11, 'Sophia Hernandez', 'sophia.hernandez@example.com', 'password11'),
+(12, 'Daniel Lopez', 'daniel.lopez@example.com', 'password12'),
+(13, 'Olivia Gonzalez', 'olivia.gonzalez@example.com', 'password13'),
+(14, 'Lucas Perez', 'lucas.perez@example.com', 'password14'),
+(15, 'Mia Wilson', 'mia.wilson@example.com', 'password15'),
+(16, 'Ethan Anderson', 'ethan.anderson@example.com', 'password16'),
+(17, 'Ava Thomas', 'ava.thomas@example.com', 'password17'),
+(18, 'Logan Jackson', 'logan.jackson@example.com', 'password18'),
+(19, 'Isabella White', 'isabella.white@example.com', 'password19'),
+(20, 'Jackson Harris', 'jackson.harris@example.com', 'password20');

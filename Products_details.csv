@@ -1,0 +1,29 @@
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL
+);
+
+INSERT INTO Products (product_id, product_name, description, price, stock) VALUES
+(1, 'Smartphone', 'Latest model smartphone with amazing features.', 199.99, 50),
+(2, 'Laptop', 'High-performance laptop for gaming and work.', 999.99, 30),
+(3, 'Wireless Headphones', 'Comfortable wireless headphones.', 79.99, 100),
+(4, 'Smartwatch', 'Fitness tracking smartwatch.', 129.99, 80),
+(5, 'Bluetooth Speaker', 'Portable Bluetooth speaker with great sound.', 49.99, 70),
+(6, 'Camera', 'High-resolution camera for stunning photos.', 299.99, 20),
+(7, '4K TV', 'Ultra HD smart TV with vibrant colors.', 999.99, 10),
+(8, 'Gaming Console', 'Latest gaming console with exclusive titles.', 399.99, 25),
+(9, 'Wireless Mouse', 'Ergonomic wireless mouse for comfort.', 29.99, 100),
+(10, 'Mechanical Keyboard', 'High-quality mechanical keyboard.', 49.99, 50),
+(11, 'External Hard Drive', '1TB external hard drive for extra storage.', 79.99, 40),
+(12, 'USB Flash Drive', '64GB USB flash drive for quick transfers.', 19.99, 150),
+(13, 'Power Bank', 'Portable power bank with fast charging.', 29.99, 60),
+(14, 'Fitness Tracker', 'Wearable device for health monitoring.', 49.99, 90),
+(15, 'Tablet', 'Lightweight tablet for browsing and reading.', 299.99, 35),
+(16, 'Smart Home Hub', 'Control all your smart devices in one place.', 99.99, 15),
+(17, 'Wireless Charger', 'Fast wireless charging pad.', 39.99, 80),
+(18, 'Smart Thermostat', 'Energy-saving smart thermostat.', 149.99, 25),
+(19, 'Bluetooth Adapter', 'Bluetooth adapter for PCs and laptops.', 19.99, 70),
+(20, 'HDMI Cable', 'High-speed HDMI cable for 4K devices.', 14.99, 100);
